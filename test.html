@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+
+
+        }
+
+        nav ul li a:hover {
+            text-decoration: none;
+            color: rgb(153, 153, 226);
+            /* border: 2px dotted grey;
+    border-radius: 5px;*/
+
+
+
+        }
+
+        main hr {
+            border: 0;
+            background-color: #9c97f1;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 23px 0;
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            /* background-color: rebeccapurple; */
+            font-size: 1.5rem;
+        }
+
+        .leftsection .btn {
+            /* background-color: rebeccapurple; */
+            /* font-size: 1.5rem; */
+            margin-right: 15px;
+            margin-top: 32px;
+            border: 2px solid white;
+            color: white;
+
+        }
+
+
+        .rightsection img {
+            width: 80%;
+            margin: 50px 0;
+        }
+
+        .wrapper {
+            display: flex;
+            /* justify-content: space-around; */
+            margin: 23px 150px;
+        }
+
+        .wrapper .static-txt {
+            color: #fff;
+            font-size: 60px;
+            font-weight: 400;
+        }
+
+        .wrapper .dynamic-txts {
+            margin-left: 15px;
+            height: 90px;
+            line-height: 90px;
+            overflow: hidden;
+        }
+
+        .dynamic-txts li {
+            list-style: none;
+            color: #FC6D6D;
+            font-size: 60px;
+            font-weight: 500;
+            position: relative;
+            top: 0;
+            animation: slide 12s steps(4) infinite;
+        }
+
+        @keyframes slide {
+            100% {
+                top: -360px;
+            }
+        }
+
+        .dynamic-txts li span {
+            position: relative;
+            margin: 5px 0;
+            line-height: 90px;
+        }
+
+        .dynamic-txts li span::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgb(0, 0, 33);
+            border-left: 2px solid #FC6D6D;
+            animation: typing 3s steps(10) infinite;
+        }
+
+        @keyframes typing {
+
+            40%,
+            60% {
+                left: calc(100% + 30px);
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .secondsection h1 {
+            font-size: 2.5rem;
+        }
+
+        .card {
+            color: black;
+        }
+
+        .projects {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .card-img,
+        .card-img-bottom,
+        .card-img-top {
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            width: 100%;
+            height: 245px;
+        }
+
+        .footer {
+            background: #000;
+            padding: 30px 0px;
+            font-family: 'Play', sans-serif;
+            text-align: center;
+        }
+
+
+
+        .footer .row {
+            width: 100%;
+            margin: 1% 0%;
+            padding: 0.6% 0%;
+            color: gray;
+            font-size: 0.8em;
+            display: block;
+        }
+
+        .footer .row a {
+            text-decoration: none;
+            color: gray;
+            transition: 0.5s;
+        }
+
+        .footer .row a:hover {
+            color: #fff;
+        }
+
+        .footer .row ul {
+            width: 100%;
+        }
+
+        .footer .row ul li {
+            display: inline-block;
+            margin: 0px 30px;
+        }
+
+        .footer .row a i {
+            font-size: 2em;
+            margin: 0% 1%;
+        }
+
+        @media (max-width:720px) {
+            .footer {
+                text-align: left;
+                padding: 5%;
+            }
+
+            .footer .row ul li {
+                display: block;
+                margin: 10px 0px;
+                text-align: left;
+            }
+
+            .footer .row a i {
+                margin: 0% 3%;
+            }
+        }
+
+        /* contact section */
+        .contact-section {
+            margin-top: 50px;
+            padding: 40px 0;
+
+        }
+
+        .contact-section h1 {
+            text-align: center;
+            color: #ddd;
+        }
+
+
+
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            padding: 0 10px;
+            overflow: hidden;
+            background: none;
+        }
+
+        .contact-form-text {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 16px 0;
+            border: none;
+            border: 1px solid #ccc;
+            background: none;
+            padding: 20px 40px;
+            outline: none;
+            color: #ddd;
+            transition: 0.5s;
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+
+        .contact-form-text:focus {
+            box-shadow: 0 0 10px 4px #34495e;
+            background: #fff;
+            color: #262626;
+            font-size: 14px;
+        }
+
+        textarea.contact-form-text {
+            resize: none;
+            height: 120px;
+        }
+
+        .contact-form-btn {
+            float: right;
+            border: 0;
+            background: #34495e;
+            color: #fff;
+            padding: 12px 50px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .contact-form-btn:hover {
+            background: #2980b9;
+        }
+
+        .section2 {
+            width: 80vw;
+            margin: auto;
+        }
+
+        .skillsection {
+            display: flex;
+            justify-content: space-around;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .cont {
+            /* margin-right: 2px; */
+            width: 20vw;
+            /* height: 100px; */
+            /* border: 2px solid white; */
+            margin-bottom: 27px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-right: 0px; */
+        }
+
+        .cont {
+            /* margin-right: 2px; */
+            width: 20vw;
+            /* height: 100px; */
+            /* border: 2px solid white; */
+            margin-bottom: 27px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-right: 0px; */
+        }
+
+        .cont .icon {
+
+            height: 50px;
+            width: 50px;
+            /* border: 2px solid white; */
+            margin-right: 25px;
+
+        }
+
+        .cont .topic {
+            font-size: x-large;
+            width: 146px;
+            height: 35px;
+            /* border: 2px solid white; */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .cont .icon img {
+
+            height: 50px;
+            width: 50px;
+
+
+        }
+
+        hr {
+            height: 2px;
+            background: linear-gradient(90deg, #00ffea, #00ad99, #00ffea);
+            border: none;
+            margin: 20px 0;
+            animation: neon 1.5s ease-in-out infinite;
+        }
+
+        @keyframes neon {
+            0% {
+                filter: drop-shadow(0 0 5px #00ffea);
+                box-shadow: 0 0 10px #00ffea;
+            }
+
+            25% {
+                filter: drop-shadow(0 0 20px #00ffea);
+                box-shadow: 0 0 20px #00ffea;
+            }
+
+            50% {
+                filter: drop-shadow(0 0 20px #00ffea);
+                box-shadow: 0 0 30px #00ffea;
+            }
+
+            75% {
+                filter: drop-shadow(0 0 20px #00ffea);
+                box-shadow: 0 0 20px #00ffea;
+            }
+
+            100% {
+                filter: drop-shadow(0 0 5px #00ffea);
+                box-shadow: 0 0 10px #00ffea;
+            }
+        }
+
+        /* Add this CSS at the end of your existing CSS */
+
+        /* Adjust navigation for smaller screens */
+        @media (max-width: 400px) {
+            nav {
+                height: auto;
+                /* display: none; */
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                display: none;
+            }
+            .wrapper{
+                display: none;
+            }
+
+            .static-txt {
+                /* display: none; */
+                font-size: 16px;
+                /* z-index: -1; */
+            }
+
+            .dynamic-txts li {
+                /* font-size: 16px; */
+                display: none;
+                /* z-index: -1; */
+            }
+
+            .leftsection {
+                font-size: 1rem;
+            }
+
+            .leftsection .btn {
+                font-size: 1rem;
+                margin-right: 10px;
+            }
+
+            .rightsection img {
+                width: 100%;
+                margin: 20px 0;
+            }
+            #button{
+                display: flex;
+                width: 45vw;
+            }
+        }
+
+        /* Adjust skill section for smaller screens */
+        @media (max-width: 768px) {
+            .skillsection {
+                display: flex;
+                flex-direction:row;
+                /* flex-wrap: wrap; */
+            }
+
+            .cont {
+                width: 25vw;
+                margin-bottom: 50px;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .cont .icon {
+                height: 50px;
+                width: 50px;
+                margin-right: 25px;
+            }
+
+            .cont .topic {
+                font-size: 1rem;
+                width: auto;
+                justify-content: center;
+                align-items: center;
+                /* margin-bottom: 5px; */
+                border: none;
+            }
+        }
+
+        /* Adjust project cards for smaller screens */
+        @media (max-width: 768px) {
+            .projects {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Adjust contact form for smaller screens */
+        @media (max-width: 768px) {
+            .contact-form-text {
+                padding: 10px 20px;
+            }
+
+            .contact-form-btn {
+                padding: 10px 20px;
+            }
+        }
+
+        /* Adjust footer for smaller screens */
+        @media (max-width: 768px) {
+            .footer .row {
+                text-align: center;
+            }
+
+            .footer .row ul li {
+                display: block;
+                margin: 5px 0;
+            }
+
+            .footer .row a i {
+                margin: 0 5px;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Priti's Portfolio</div>
+            <div class="right">
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="mobile-menu">
+                    <li class="Home"><a href="/">Home</a></li>
+                    <li class="About"><a href="/">Skills</a></li>
+                    <li class="projects"><a href="/">Projects</a></li>
+                    <li class="contact"><a href="/">Contact-Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="static-txt">I'm a</div>
+        <ul class="dynamic-txts">
+            <li><span>Designer</span></li>
+            <li><span>Developer</span></li>
+            <li><span>Freelancer</span></li>
+            <li><span>Enthusiastic Coder</span></li>
+
+        </ul>
+    </div>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi I'm <span class="purple">Priti Ranjan Samal</span> , <div> a passionate web developer </div>
+                <div> and coding enthusiast </div> With a strong commitment to crafting innovative digital experiences.
+                <div id="button">
+                    <a href="./resources/Resume-priti-ranjan-samal (1).pdf" Download="resume">
+                        <button type="button" class="btn"> Download Resume </button>
+                    </a>
+                    <a href="https://github.com/pritiranjan1605" target="_blank">
+                        <button class="btn">Visit Github</button>
+                    </a>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="./resources/developer-illustration.webp" alt="">
+            </div>
+        </section>
+        <hr class="rules">
+        <br>
+        <section class="section2">
+            <div class="heading" style="
+            display: flex;
+            justify-content: center;">
+                <h1>Skills</h1>
+            </div>
+            <br>
+            <br>
+            <div class="skillsection">
+                <div class="cont">
+                    <div class="icon">
+                        <img src="./resources/letter-c.png" alt="">
+                    </div>
+                    <div class="topic"> C Language</div>
+                </div>
+                <div class="cont">
+                    <div class="icon">
+                        <img src="./resources/html.png" alt="">
+                    </div>
+                    <div class="topic">HTML</div>
+                </div>
+                <div class="cont">
+                    <div class="icon">
+                        <img src="./resources/css-3.png" alt="">
+                    </div>
+                    <div class="topic">CSS</div>
+                </div>
+                <div class="cont">
+                    <div class="icon">
+                        <img src="./resources/js.png" alt="">
+                    </div>
+                    <div class="topic">JavaScript</div>
+                </div>
+                <div class="cont">
+                    <div class="icon">
+                        <img src="./resources/git.png" alt="">
+                    </div>
+                    <div class="topic">Git</div>
+                </div>
+                <div class="cont">
+                    <div class="icon">
+                        <img src="./resources/java.png" alt="">
+                    </div>
+                    <div class="topic">Java</div>
+                </div>
+                <div class="cont">
+                    <div class="icon">
+                        <img src="./resources/mysql.png" alt="">
+                    </div>
+                    <div class="topic">SQL</div>
+                </div>
+                <div class="cont">
+                    <div class="icon">
+                        <img src="./resources/node-js.png
+                         " alt="">
+                    </div>
+                    <div class="topic">Node JS</div>
+                </div>
+                <div class="cont">
+                    <div class="icon">
+                        <img src="./resources/go.png" alt="">
+                    </div>
+                    <div class="topic">GO Lang</div>
+                </div>
+                <div class="cont">
+                    <div class="icon">
+                        <img src="./resources/docker (1).png" alt="">
+                    </div>
+                    <div class="topic">Docker</div>
+                </div>
+                <div class="cont">
+                    <div class="icon">
+                        <img src="./resources/icons8-bash-48.png" alt="">
+                    </div>
+                    <div class="topic">Shell Script</div>
+                </div>
+                <div class="cont">
+                    <div class="icon">
+                        <img src="./resources/icons8-jenkins-48.png" alt="">
+                    </div>
+                    <div class="topic">Jenkins</div>
+                </div>
+
+            </div>
+        </section>
+        <br>
+        <hr class="rules">
+        <section class="secondsection">
+            <div class="projectname" style="
+            display: flex;
+            justify-content: center;">
+                <h1>Projects</h1>
+            </div>
+            <br>
+            <br>
+            <div class="projects">
+                <div class="card" style="width: 18rem;">
+                    <img src="./resources/wp8761730-discord-logo-wallpapers.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Discord Bot</h5>
+                        <p class="card-text">Built with JavaScript, this Discord bot is a versatile addition to any
+                            server. It offers customizable features like moderation tools,and fun commands.</p>
+                        <a href="https://github.com/pritiranjan1605/discord_bot" target="_blank"
+                            class="btn btn-primary">Visit Repository</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./resources/wp11876734-amazon-company-wallpapers.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Amazon.in Colne</h5>
+                        <p class="card-text">An Amazon.in clone, meticulously crafted with HTML and CSS, mirrors the
+                            renowned e-commerce platform's visual appeal and layout. </p>
+                        <a href="https://github.com/pritiranjan1605/Amazon-clone-using-HTML-and-CSS" target="_blank"
+                            class="btn btn-primary">Visit Repository</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./resources/memmaker.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Random Meme Generator</h5>
+                        <p class="card-text">Experience endless laughter with our HTML, CSS, and JavaScript-powered meme
+                            generator. Create and customize hilarious memes </p>
+                        <a href="https://github.com/pritiranjan1605/meme-generator" target="_blank"
+                            class="btn btn-primary">Visit Repository</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./resources/weatherforcast.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Weather Forcast Application</h5>
+                        <p class="card-text">Experience real-time weather updates with our weather forecast application.
+                            Crafted using HTML, CSS, and JavaScript</p>
+                        <a href="" class="btn btn-primary">Visit Repository</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <hr class="rules">
+        <div class="contact-section">
+
+            <h1>Contact Me</h1>
+
+            <form class="contact-form" action="" method="">
+                <input type="text" class="contact-form-text" placeholder="Your name">
+                <input type="email" class="contact-form-text" placeholder="Your email">
+                <input type="text" class="contact-form-text" placeholder="Your phone">
+                <textarea class="contact-form-text" placeholder="Your message"></textarea>
+                <input type="submit" class="contact-form-btn" value="Send">
+            </form>
+        </div>
+        <br>
+        <footer>
+            <div class="footer">
+                <div class="row">
+                    <a href="https://github.com/pritiranjan1605" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://www.instagram.com/its_me_pritiranjan/" target="_blank"><i
+                            class="fa fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/priti-ranjan-samal-5b3643224/" target="_blank"><i
+                            class="fa fa-linkedin"></i></a>
+                    <a href="https://twitter.com/14pritiranjan" target="_blank"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="row">
+                    Copyright © 2023 - All rights reserved || Designed By: Prti Ranjan Samal
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+
+
+</body>
+
+</html>
